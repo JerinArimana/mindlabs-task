@@ -1,0 +1,40 @@
+@import "tailwindcss";
+$container-max-width: 1736px;
+$padding-mobile: 12px;
+$padding-tablet: 24px;
+$padding-desktop: 32px;
+
+$mobile: 640px;
+$tablet: 1024px;
+$desktop: 1025px;
+:root {
+  --background: #ffffff;
+  --foreground: #11201B;
+}
+
+
+.custom-container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding-desktop;
+  padding-right: $padding-desktop;
+
+  @media (max-width: $mobile) {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+
+  @media (min-width: 641px) and (max-width: $tablet) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $container-max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
