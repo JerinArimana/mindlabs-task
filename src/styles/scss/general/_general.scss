@@ -9,9 +9,21 @@ $tablet: 1024px;
 $desktop: 1025px;
 :root {
   --background: #ffffff;
-  --foreground: #11201B;
+  --foreground: #172A24;
+  --light-blue:#F6FBFF;
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif!important;
+  padding: 0;
+  margin: 0;
+}
+p{
+  padding: 0;
+  margin: 0;
+}
 
 .custom-container {
   width: 100%;

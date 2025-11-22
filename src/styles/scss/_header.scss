@@ -1,0 +1,16 @@
+.header {
+  padding: 26px 0px;
+  &__menu {
+    a {
+      color: var(--foreground);
+    }
+  }
+  .header-custom-btn{
+    background-color: var(--foreground);
+    font-size: 1rem;
+    color: white;
+    padding: 0.563rem 1.625rem;
+    border-radius: 10px;
+  }
+}
+

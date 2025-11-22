@@ -1,43 +1,72 @@
 import Header from "@/components/Header";
 import Image from "next/image";
-import Accordion from 'react-bootstrap/Accordion';
-
-
+import Accordion from "react-bootstrap/Accordion";
+import { headerMenu } from "@/util/demmyText";
+import { Container } from "react-bootstrap";
+import Shopify from "../../public/images/shopify.png";
+import Stripe from "../../public/images/Stripe_Logo.png";
+import Slack from "../../public/images/Slack.png";
+import Zoom from "../../public/images/Zoom.png";
+import bannerDashboard from "../../public/images/banner-sec-dashboard.png";
 export default function Home() {
   return (
     <>
-    <Header/>
+      <Header headerMenu={headerMenu} />
 
-    <div className="grid grid-cols-2 md:grid-cols-3">
-      <div>2</div>
-      <div>3</div>
-    </div>
-     <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+      <section className="homebanner">
+        <Container className="custom-container">
+          <div className="homebanner_area">
+            <div className="homebanner-wrapper">
+              <div className="homebanner-content">
+                <h1 className="homebanner-title">
+                  <span className="brand-text">FlockDesk</span> speeds up
+                  support and boosts
+                  <span className="highlight-text"> retention.</span>
+                </h1>
+
+                <p className="homebanner-subtitle">
+                  Deliver outstanding support and achieve new goals with
+                  FlockDesk.
+                </p>
+
+                <div className="cta-buttons">
+                  <button className="btn btn-primary">Get Started</button>
+                  <button className="btn btn-secondary">Get a Demo</button>
+                </div>
+              </div>
+            </div>
+            <div className="trust-section">
+              <p className="trust-text">
+                Trusted by leading companies worldwide
+              </p>
+              <div className="company-logos">
+                <Image src={Shopify} alt="Shopify" className="logo" />
+                <Image src={Stripe} alt="Shopify" className="logo" />
+                <Image src={Slack} alt="Shopify" className="logo" />
+                <Image src={Zoom} alt="Shopify" className="logo" />
+              </div>
+            </div>
+            <div className="dashboard-preview">
+              <Image
+                src={bannerDashboard}
+                alt="FlockDesk Dashboard"
+                className="dashboard-image"
+              />
+            </div>
+            <div className="commitment-section">
+              <p className="commitment-text">
+                We are committed to providing{" "}
+                <strong>exceptional customer support</strong> every day. Our
+                team carefully reviews each ticket to ensure your concerns are
+                understood, addressed, and resolved as quickly as possible. You
+                can count on us to{" "}
+                <strong>deliver consistent, reliable assistance</strong>{" "}
+                whenever you need it.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
     </>
   );
 }

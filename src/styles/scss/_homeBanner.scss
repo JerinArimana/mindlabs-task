@@ -1,0 +1,162 @@
+.homebanner {
+  background: rgba(246, 251, 255, 1);
+  min-height: 100vh;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+  &_area {
+    position: relative;
+    z-index: 1;
+  }
+}
+.homebanner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.homebanner-content {
+  text-align: center;
+  max-width: 1130px;
+}
+
+.homebanner-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: rgba(51, 52, 78, 1);
+
+  .brand-text {
+    color: #667eea;
+  }
+
+  .highlight-text {
+    color: #667eea;
+  }
+}
+
+.homebanner-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(93, 106, 102, 1);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background-color: rgba(58, 57, 70, 1);
+  color: white;
+
+  &:hover {
+    background-color: #2d3748;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #4a5568;
+  border: 2px solid #4a5568;
+
+  &:hover {
+    background-color: #4a5568;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .homebanner-section {
+    padding: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+.trust-section {
+  text-align: center;
+  .trust-text {
+    font-size: 16px;
+  }
+  .company-logos {
+    display: flex;
+    gap: 95px;
+    justify-content: center;
+    align-items: center;
+    max-width: 813px;
+    margin: 0 auto;
+    padding-top: 40px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    img {
+      max-width: 160px;
+      max-height: 38px;
+      object-fit: contain;
+    }
+  }
+}
+
+.dashboard-preview {
+  margin-top: 100px;
+}
+.commitment-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  .commitment-text {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: rgba(121, 121, 121, 1);
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    strong {
+      color: rgba(42, 42, 42, 1);
+    }
+  }
+}
