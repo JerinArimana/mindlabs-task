@@ -36,7 +36,7 @@ const Header = ({ headerMenu }: any) => {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <Nav className="m-auto flex gap-8 text-sm font-bold uppercase header__menu">
+              <Nav className="m-auto flex gap-1 lg:gap-8 text-sm font-bold uppercase header__menu">
                 {headerMenu.map((nav: any) => (
                   <Nav.Link id={nav.id} href={nav.link} className="">
                     {nav.nav}
