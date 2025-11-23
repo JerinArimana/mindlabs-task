@@ -300,9 +300,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1200px) {
-    height: 1015px;
-  }
+ 
   &__subtitle {
     font-size: 1.25rem;
     color: rgba(108, 134, 227, 1);
@@ -420,7 +418,7 @@
         padding-left: 1rem;
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 768px) {
         grid-template-columns: 1fr;
         .right-split,
         .left-split {
@@ -452,7 +450,7 @@
 .faq-section {
   padding-bottom: 107px;
   &__accordion {
-    max-width: 1300px;
+    max-width: 1000px;
     margin: 0 auto;
     .accordion {
       border: unset !important;
@@ -524,10 +522,10 @@
     }
   }
   &__text-content {
-    max-width: 720px;
+    width: 720px;
 
     @include respond-to(tablet) {
-      max-width: 100%;
+      width: 100%;
       text-align: center;
     }
   }
@@ -574,9 +572,12 @@
     display: flex;
     margin-bottom: 24px;
         max-width: 670px;
-    margin: 0 auto;
-    margin-bottom: 25px;
     
+    margin-bottom: 25px;
+    @media (max-width: 992px){
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
   }
 
   .email-input {
@@ -659,12 +660,13 @@
     gap: 48px;
 
     @media (min-width: 768px) {
-      grid-template-columns: 1.2fr 2fr 1fr;
+      // grid-template-columns: 1.2fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr 1fr;
       gap: 40px;
     }
 
     @media (min-width: 1024px) {
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr 1fr;
     }
   }
 
@@ -970,9 +972,9 @@
     gap: 40px;
   }
 
-  .perfect-hub {
-    max-width: 800px;
-  }
+  // .perfect-hub {
+  //   max-width: 800px;
+  // }
 
   .footer__container {
     gap: 30px;
@@ -1007,7 +1009,7 @@
   }
 
   .footer__container {
-    max-width: 1736px;
+    // max-width: 1736px;
     margin: auto;
   }
 }

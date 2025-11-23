@@ -18,11 +18,28 @@ import MonitorTab from "@/components/MonitorTab";
 import dotPattern from "../../public/images/dotpattern.svg";
 import Accordion from "react-bootstrap/Accordion";
 import Faq from "@/components/Faq";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import tablist from '../../public/images/tablist.png';
 import Footer from "@/components/Footer";
 export default function Home() {
   const [email, setEmail] = useState("");
+ const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // scroll threshold
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -30,7 +47,7 @@ export default function Home() {
   };
   return (
     <>
-      <Header headerMenu={headerMenu} />
+      <Header headerMenu={headerMenu} scrolled={scrolled}/>
 
       <section className="homebanner">
         <Container className="custom-container">

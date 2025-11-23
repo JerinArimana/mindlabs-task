@@ -8,14 +8,14 @@ import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import brandLogo from "../../public/images/flock-desk-logo.svg";
 
-const Header = ({ headerMenu }: any) => {
+const Header = ({ headerMenu, scrolled }: any) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <header>
-      <Navbar expand="lg" className="header">
+    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+      <Navbar expand="lg" >
         <Container className="custom-container">
           <Navbar.Brand href="#home" className="p-0">
             <Image src={brandLogo} alt="flock desk logo" />

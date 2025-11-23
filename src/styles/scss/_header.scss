@@ -1,11 +1,19 @@
 .header {
   padding: 26px 0px;
+  background-color: rgba(255, 255, 255, 0.48);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  &.scrolled{
+    backdrop-filter: blur(10px);
+  }
   &__menu {
     a {
       color: var(--foreground);
     }
   }
-  .header-custom-btn{
+  .header-custom-btn {
     background-color: var(--foreground);
     font-size: 1rem;
     color: white;
@@ -13,4 +21,3 @@
     border-radius: 10px;
   }
 }
-
