@@ -100,7 +100,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex justify-baseline gap-[35px] flex-col sm:flex-row md:flex-col lg:flex-row">
+          <div className="flex justify-baseline gap-[30px]  flex-col sm:flex-row md:flex-col lg:flex-row">
             <div className="footer__cta">
               <h3 className="footer__cta-heading">
                 Start your free trial today
